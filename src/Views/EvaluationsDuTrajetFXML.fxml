@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" styleClass="mainFxmlClass" stylesheets="@../Styles/evaluationsdutrajetfxml.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.EvaluationsDuTrajetFXMLController">
+   <children>
+      <ListView fx:id="ListeDesEvaluationsParTrajet" blendMode="SRC_ATOP" layoutX="96.0" layoutY="35.0" prefHeight="500.0" prefWidth="828.0" />
+      <JFXButton fx:id="Bouton_evaluer_trajet" layoutX="664.0" layoutY="554.0" onAction="#evaluer_trajet" text="Evaluate this ride" textFill="#cdcdcd">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="bouton_retour" layoutX="22.0" layoutY="24.0" onAction="#retour_de_liste_evaluations_par_trajet" text="Back" textFill="#cdcdcd">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="Message_Evaluer_Trajet" layoutX="286.0" layoutY="557.0" prefHeight="17.0" prefWidth="261.0" textFill="WHITE" />
+      <JFXButton layoutX="580.0" layoutY="554.0" onAction="#Supprimer_evaluation_button" styleClass="buoton" stylesheets="@evaluationsdutrajetfxml.css" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

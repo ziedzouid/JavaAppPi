@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="739.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController_1">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="gradient">
+         <children>
+            <ImageView fx:id="imgLogin" fitHeight="100.0" fitWidth="100.0" layoutX="320.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/lgnCar.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="153.0" layoutY="167.0" prefHeight="30.0" prefWidth="437.0" style="-fx-background-color: rgb(150, 174, 191); -fx-border-radius: 5; -fx-background-radius: 5;" />
+            <AnchorPane layoutX="140.0" layoutY="182.0" prefHeight="311.0" prefWidth="460.0" style="-fx-background-color: rgb(233, 240, 245); -fx-background-radius: 5;">
+               <children>
+                  <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="172.0" layoutY="225.0" onAction="#doLogin" prefHeight="30.0" prefWidth="132.0" ripplerFill="#21b8dd" style="-fx-background-color: #298DC5; -fx-text-fill: white;" text="Login">
+                     <font>
+                        <Font name="Roboto Black" size="16.0" />
+                     </font>
+                  </JFXButton>
+               
+                  <JFXTextField fx:id="mail" focusColor="#b5b5b5" labelFloat="true" layoutX="93.0" layoutY="126.0" prefHeight="30.0" prefWidth="290.0" promptText="Enter email" style="-fx-text-fill: black;" unFocusColor="WHITE">
+                     <font>
+                        <Font name="Roboto Medium" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="pass" focusColor="#f8f8f8" labelFloat="true" layoutX="93.0" layoutY="179.0" prefHeight="28.0" prefWidth="290.0" promptText="Enter password" style="-fx-text-fill: black;" unFocusColor="WHITE">
+                     <font>
+                        <Font name="Roboto Medium" size="14.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <Label layoutY="37.0" prefHeight="42.0" prefWidth="325.0" style="-fx-border-width: 0 0 0 4; -fx-border-color: #ff3b9d;" text="LOGIN" textFill="#ff3b9d">
+                     <font>
+                        <Font name="Roboto Black" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Label>
+                  <Hyperlink layoutX="44.0" layoutY="232.0" text="ForgotPassword?" />
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="sign" buttonType="RAISED" layoutX="87.0" layoutY="53.0" onAction="#signin" prefHeight="30.0" prefWidth="132.0" ripplerFill="#3b5998" style="-fx-background-color: #3b5998; -fx-text-fill: white;" text="SignUp">
+               <font>
+                  <Font name="Comic Sans MS" size="16.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="message" layoutX="196.0" layoutY="508.0" prefHeight="30.0" prefWidth="319.0" textFill="#e81818" visible="false">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="namelogin" layoutX="531.0" layoutY="50.0" prefHeight="64.0" prefWidth="150.0" rotate="18.4" text="Cool Voiturage" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="fb" contentDisplay="GRAPHIC_ONLY" layoutX="79.0" layoutY="88.0" onAction="#loginfb" prefHeight="37.0" prefWidth="132.0">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/fb.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children></AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="600.0" prefWidth="1000.0" styleClass="gradient" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.FeedbacksAdminController">
+   <children>
+      <Label layoutX="469.0" layoutY="29.0" prefHeight="42.0" prefWidth="185.0" text="FeedBacks" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="417.0" layoutY="71.0" prefHeight="51.0" prefWidth="263.0" text="YOU CAN CHECK THE FEEDBACKS HERE" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </Label>
+      <TitledPane animated="false" layoutX="41.0" layoutY="132.0" prefHeight="401.0" prefWidth="500.0" styleClass="titledPane" text="FEEDBACKS">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="371.0" prefWidth="509.0">
+               <children>
+                  <TableView fx:id="feedbacksview" layoutX="171.0" onMouseClicked="#displayclaim" prefHeight="370.0" prefWidth="322.0" styleClass="tab-selected-line">
+                    <columns>
+                      <TableColumn fx:id="datefeedback" prefWidth="167.0" text="              DATE" />
+                        <TableColumn fx:id="statusfeed" prefWidth="170.0" text="          STATUS" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="nametabfeed" prefHeight="372.0" prefWidth="173.0" styleClass="tab-selected-line">
+                    <columns>
+                      <TableColumn fx:id="namefeedsadmin" prefWidth="162.0" text="                   NAME" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="733.0" layoutY="132.0" prefHeight="401.0" prefWidth="202.0" styleClass="titledPane" text="CLAIM">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextFlow fx:id="claimview" layoutX="14.0" layoutY="62.0" lineSpacing="2.0" prefHeight="221.0" prefWidth="172.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <JFXButton fx:id="deletefeedback" buttonType="RAISED" layoutX="593.0" layoutY="262.0" onAction="#deletefeedadmin" prefHeight="42.0" prefWidth="113.0" ripplerFill="#12c7ff" styleClass="btn-default" text="Delete Feedback">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="deleteallfeeds" buttonType="RAISED" layoutX="602.0" layoutY="357.0" onAction="#deleteallfeeds" prefHeight="42.0" prefWidth="104.0" ripplerFill="#ff1212" styleClass="btn-default" text="Delete All">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="retfeed" fitHeight="42.0" fitWidth="54.0" layoutX="20.0" layoutY="8.0" onMouseClicked="#returnfromfeedsadmin" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/left.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

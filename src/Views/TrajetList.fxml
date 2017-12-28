@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import org.controlsfx.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.TrajetListController">
+   <children>
+      <TableView fx:id="tableviewTrajet" layoutX="447.0" layoutY="105.0" prefHeight="385.0" prefWidth="650.0">
+        <columns>
+          <TableColumn fx:id="colVilleDepart" onEditStart="#changeVilleDepartCellEvent" prefWidth="105.66668701171875" resizable="false" text="Ville Depart" />
+          <TableColumn fx:id="colVilleArrive" prefWidth="97.33334350585938" text="Ville Arrive" />
+            <TableColumn fx:id="colDateDepart" prefWidth="106.66668701171875" text="Date Depart" />
+            <TableColumn fx:id="colNbrePersonne" prefWidth="127.33331298828125" text="Nombre Personne" />
+            <TableColumn fx:id="colPrix" minWidth="0.0" prefWidth="72.66668701171875" text="Prix" />
+            <TableColumn fx:id="colDateAnnonce" prefWidth="137.0" resizable="false" text="Date et heure annonce" />
+        </columns>
+      </TableView>
+      <AnchorPane prefHeight="105.0" prefWidth="1100.0" style="-fx-background-color: rgb(49, 68, 90,0.9);">
+         
+          <children>
+            <ImageView fx:id="imgBack" fitHeight="40.0" fitWidth="51.0" layoutX="22.0" layoutY="9.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/left.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="448.0" layoutY="71.0" prefHeight="38.0" prefWidth="649.0" style="-fx-background-color: rgb(0, 179, 160); -fx-background-radius: 4 4 0 0;" text="Liste des Trajets" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="431.0" layoutY="5.0" text="Gestion Trajet" textFill="WHITE">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton buttonType="RAISED" layoutX="857.0" layoutY="530.0" onAction="#boutonDelete" prefHeight="33.0" prefWidth="96.0" style="-fx-background-color: rgb(49, 68, 90,0.9);" text="Supprimer" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="592.0" layoutY="531.0" onAction="#boutonRefresh" prefHeight="33.0" prefWidth="96.0" style="-fx-background-color: rgb(49, 68, 90,0.9);" text="Rafraichir" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="search" alignment="CENTER" layoutX="450.0" layoutY="495.0" onKeyReleased="#search" prefHeight="31.0" prefWidth="647.0" promptText="Rechercher">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <AnchorPane id="AnchorPane" layoutY="48.0" prefHeight="429.0" prefWidth="429.0">
+         <children>
+            <AnchorPane id="AnchorPane" fx:id="rootPane" layoutX="-3.0" layoutY="322.0" prefHeight="120.0" prefWidth="427.0" styleClass="gradient" stylesheets="@mutiny/mutinyfx/src/Views/style.css">
+               <children>
+                  <AnchorPane layoutX="3.0" layoutY="-212.0" prefHeight="367.0" prefWidth="427.0" style="-fx-background-color: rgb(255, 255, 255,0.9); -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4;">
+                     <children>
+                        <VBox layoutX="36.0" layoutY="58.0" prefHeight="204.0" prefWidth="244.0" spacing="8.0">
+                           <children>
+                              <JFXComboBox fx:id="ville_depart" prefHeight="25.0" prefWidth="244.0" promptText="Ville de Depart" style="-fx-font-size: 14;" />
+                              <JFXComboBox fx:id="ville_arrive" prefHeight="25.0" prefWidth="244.0" promptText="Ville d'Arrive" style="-fx-font-size: 14;" />
+                              <JFXComboBox fx:id="nombre_place" prefHeight="25.0" prefWidth="244.0" promptText="Nombre de Place" style="-fx-font-size: 14;" />
+                              <JFXTextField fx:id="prix" prefHeight="28.0" prefWidth="244.0" promptText="Prix" unFocusColor="#a8a2a2">
+                                 <font>
+                                    <Font name="Roboto Medium" size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <DatePicker fx:id="date_trajet" promptText="Date du trajet" />
+                              <JFXComboBox fx:id="evenement" prefHeight="25.0" prefWidth="244.0" promptText="Evenement" style="-fx-font-size: 14;" />
+                           </children>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </VBox>
+                        <Label layoutY="-2.0" prefHeight="40.0" prefWidth="427.0" style="-fx-background-color: rgb(0, 179, 160); -fx-background-radius: 4 4 0 0;" text="Ajouter un Covoiturage" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Medium" size="21.0" />
+                           </font>
+                           <graphic>
+                       <!-- <FontAwesomeIconView fill="WHITE" glyphName="GG_CIRCLE" size="24.0" wrappingWidth="27.0" />-->
+                     </graphic>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <JFXButton fx:id="AjouterTrajet" buttonType="RAISED" layoutX="137.0" layoutY="289.0" onAction="#submit" prefHeight="53.0" prefWidth="154.0" style="-fx-background-color: rgb(49, 68, 90,0.9);" text="Ajouter Trajet" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Medium" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <HyperlinkLabel layoutX="295.0" layoutY="190.0" prefHeight="19.0" prefWidth="21.0" text="DT" />
+                        <Label fx:id="verifprix" layoutX="316.0" layoutY="182.0" prefHeight="17.0" prefWidth="103.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="btn_map" buttonType="RAISED" layoutX="319.0" layoutY="73.0" onAction="#openMap" prefHeight="33.0" prefWidth="96.0" style="-fx-background-color: rgb(49, 68, 90,0.9);" text="Map" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Medium" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

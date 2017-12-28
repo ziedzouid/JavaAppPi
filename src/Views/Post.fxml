@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" onDragDetected="#returnfrompostpass" prefHeight="600.0" prefWidth="1000.0" styleClass="gradient" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PostController">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="62.0" layoutY="109.0" prefHeight="44.0" prefWidth="206.0" style="-fx-border-radius: 5; -fx-background-color: #a7a9c2; -fx-background-radius: 5;">
+         <children>
+            <Label layoutX="20.0" layoutY="-4.0" prefHeight="51.0" prefWidth="169.0" text="Add Post" textFill="#010d94">
+               <font>
+                  <Font name="Comic Sans MS Italic" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXTextArea fx:id="text" focusColor="#dedfe0" layoutX="158.0" layoutY="197.0" prefHeight="154.0" prefWidth="451.0" style="-fx-background-color: #a7a9c2;" />
+      <JFXButton buttonType="RAISED" layoutX="513.0" layoutY="411.0" onAction="#poster" prefHeight="44.0" prefWidth="111.0" style="-fx-background-color: #a7a9c2;" text="Post" textFill="#010d94">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="passenger" layoutX="107.0" layoutY="438.0" prefHeight="55.0" prefWidth="265.0" visible="false" />
+      <Button fx:id="retfrompassmenu" layoutX="862.0" layoutY="37.0" mnemonicParsing="false" onAction="#returntomenupass" prefHeight="44.0" prefWidth="111.0" style="-fx-background-color: #c99f9f;" styleClass="btn-default" text="Return" textFill="#f5f3f3">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="fbicon" fitHeight="54.0" fitWidth="220.0" layoutX="737.0" layoutY="231.0" onMouseClicked="#facebookshare" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ressources/share-on-facebook.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

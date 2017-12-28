@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" styleClass="gradient" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.FormulaireeditController">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+   <children>
+      <JFXButton fx:id="telechargerIm" layoutX="14.0" layoutY="185.0" onAction="#telechargerIm" style="-fx-background-color: #4d1414;" text="upload" textFill="#fcf8f8" />
+      <Label layoutX="32.0" layoutY="300.0" prefHeight="17.0" prefWidth="69.0" text="Name" />
+      <Label layoutX="32.0" layoutY="345.0" text="Lastname" />
+      <Label layoutX="38.0" layoutY="401.0" prefHeight="17.0" prefWidth="87.0" text="Sex" />
+      <Label layoutX="37.0" layoutY="474.0" prefHeight="25.0" prefWidth="128.0" text="Birthday" />
+      <DatePicker fx:id="date" layoutX="156.0" layoutY="474.0" />
+      <Label layoutX="537.0" layoutY="282.0" prefHeight="25.0" prefWidth="116.0" text="Phone" />
+      <Label layoutX="548.0" layoutY="329.0" prefHeight="25.0" prefWidth="69.0" text="E-mail" />
+      <Label layoutX="537.0" layoutY="375.0" prefHeight="25.0" prefWidth="69.0" text="Password" />
+      <Label layoutX="531.0" layoutY="423.0" text="interestedIn" />
+      <JFXCheckBox fx:id="con" layoutX="562.0" layoutY="465.0" onAction="#conducteur" prefHeight="18.0" prefWidth="116.0" text="Conductor" />
+      <JFXCheckBox fx:id="pass" layoutX="738.0" layoutY="465.0" onAction="#passager" text="Passenger" />
+      <JFXRadioButton fx:id="fem" layoutX="112.0" layoutY="401.0" onAction="#female" text="Female">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="mas" layoutX="243.0" layoutY="401.0" onAction="#male" selected="true" text="Male" toggleGroup="$gender" />
+      <JFXComboBox fx:id="combobox" layoutX="645.0" layoutY="406.0" prefHeight="25.0" prefWidth="150.0" />
+      <JFXButton layoutX="844.0" layoutY="522.0" onAction="#misajouruser" prefHeight="40.0" prefWidth="139.0" style="-fx-background-color: #5bbde4;" text="Update" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="nom" layoutX="151.0" layoutY="288.0" />
+      <JFXTextField fx:id="prenom" layoutX="151.0" layoutY="341.0" />
+      <JFXTextField fx:id="tel" layoutX="652.0" layoutY="269.0" />
+      <JFXTextField fx:id="mail" layoutX="652.0" layoutY="317.0" />
+      <JFXPasswordField fx:id="Mdp" layoutX="652.0" layoutY="362.0" />
+      <JFXButton layoutX="690.0" layoutY="522.0" onAction="#deasactivate" prefHeight="40.0" prefWidth="139.0" style="-fx-background-color: #5bbde4;" text="Desactivate" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <StackPane fx:id="fabsContainer" layoutX="914.0" layoutY="342.0" prefHeight="119.0" prefWidth="51.0" />
+      <Label fx:id="way" layoutX="175.0" layoutY="189.0" prefHeight="17.0" prefWidth="128.0" />
+      <JFXTextField fx:id="centre" layoutX="652.0" layoutY="229.0" />
+      <Label layoutX="524.0" layoutY="242.0" prefHeight="25.0" prefWidth="77.0" text="your Circle is" />
+      <BorderPane layoutX="372.0" layoutY="131.0" prefHeight="46.0" prefWidth="496.0" style="-fx-background-color: #6990bf; -fx-background-radius: 5; -fx-border-style: dashed;;">
+         <left>
+            <Label prefHeight="31.0" prefWidth="399.0" text="Fill out the blanks to update your profil" textFill="#ddcfcf" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </left>
+      </BorderPane>
+      <ImageView fx:id="imageview" fitHeight="150.0" fitWidth="200.0" layoutX="12.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="877.0" layoutY="11.0" mnemonicParsing="false" onAction="#returntocond" prefHeight="40.0" prefWidth="99.0" text="Return" textFill="#724b4b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

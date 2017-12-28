@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" styleClass="gradient" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ProduitController">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tableproduct" layoutX="14.0" layoutY="133.0" prefHeight="334.0" prefWidth="432.0">
+        <columns>
+          <TableColumn prefWidth="81.0" text="Type" />
+          <TableColumn prefWidth="350.0" text="Weight" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="addprod" layoutX="371.0" layoutY="490.0" onAction="#addproduct" prefHeight="57.0" prefWidth="92.0" style="-fx-background-color: #0b7384;" text="Add">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="removeprod" layoutX="488.0" layoutY="490.0" onAction="#deleteproduct" prefHeight="57.0" prefWidth="131.0" style="-fx-background-color: #0b7384;" text="Remove">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="editprod" layoutX="630.0" layoutY="490.0" onAction="#editproduct" prefHeight="57.0" prefWidth="104.0" style="-fx-background-color: #0b7384;" text="Edit">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="32.0" layoutY="48.0" prefHeight="56.0" prefWidth="329.0" text="Products List" textFill="#192d40">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

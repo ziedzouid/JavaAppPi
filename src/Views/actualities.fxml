@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="600.0" prefWidth="1000.0" styleClass="gradient" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ActualitiesController">
+   <children>
+      <Label layoutX="323.0" layoutY="29.0" prefHeight="44.0" prefWidth="393.0" text="NEW Actualities of your comunity" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="380.0" layoutY="71.0" prefHeight="51.0" prefWidth="263.0" text="YOU CAN CHECK THE NEW FEEDS HERE" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </Label>
+     <!-- <StackPane fx:id="fabsContainer" layoutX="903.0" layoutY="439.0" prefHeight="100.0" prefWidth="45.0" />-->
+      <JFXListView fx:id="listacts" layoutX="31.0" layoutY="176.0" onMouseClicked="#displayfeed" prefHeight="401.0" prefWidth="569.0" />
+      <JFXButton fx:id="viewmyact" layoutX="768.0" layoutY="89.0" onAction="#viewmyactuality" prefHeight="33.0" prefWidth="135.0" text="View MY POSTS" textFill="#e45a5a">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="addact" layoutX="69.0" layoutY="80.0" onAction="#addactuality" prefHeight="33.0" prefWidth="194.0" ripplerFill="#cd3db5" text="PUBLISH A NEW ONE !" textAlignment="CENTER" textFill="#e45a5a">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="retacts" buttonType="RAISED" layoutX="37.0" layoutY="17.0" onMouseClicked="#returnfromacts" text="RETURN" textFill="#ebe1e1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="msgBox" layoutX="739.0" layoutY="122.0" onMouseClicked="#gotomsgbox" prefHeight="33.0" prefWidth="194.0" ripplerFill="#cd3db5" text="Your Message Box" textAlignment="CENTER" textFill="#e45a5a">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="14.0" />
+         </font>
+      </JFXButton>
+      <TitledPane animated="false" layoutX="685.0" layoutY="176.0" prefHeight="139.0" prefWidth="263.0" styleClass="titledPane" text="THE POST">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="261.0">
+               <children>
+                  <TextFlow fx:id="description" layoutX="11.0" layoutY="11.0" prefHeight="87.0" prefWidth="237.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <ImageView fx:id="imageact" fitHeight="244.0" fitWidth="277.0" layoutX="685.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+           <Image url="@../icons/lgnCar.png" />
+        </image>
+      </ImageView>
+   </children>
+</AnchorPane>

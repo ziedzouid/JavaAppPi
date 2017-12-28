@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" styleClass="gradient" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SigninController">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+   <children>
+      <ImageView fx:id="image" fitHeight="144.0" fitWidth="126.0" layoutX="21.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/icon-user.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="phath" layoutX="73.0" layoutY="213.0" prefHeight="23.0" prefWidth="152.0" />
+      <JFXTextField fx:id="nom" focusColor="#234abf" layoutX="123.0" layoutY="310.0" unFocusColor="#cd6565">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="prenom" layoutX="123.0" layoutY="381.0" unFocusColor="#cd6565">
+         <font>
+            <Font name="Comic Sans MS Bold" size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="mail" layoutX="123.0" layoutY="453.0" prefHeight="25.0" prefWidth="214.0" unFocusColor="#cd6565">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font></JFXTextField>
+      <JFXRadioButton fx:id="fem" layoutX="109.0" layoutY="532.0" prefHeight="17.0" prefWidth="96.0" text="Female">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="mas" layoutX="225.0" layoutY="530.0" prefHeight="20.0" prefWidth="96.0" text="Male" toggleGroup="$gender">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </JFXRadioButton>
+      <DatePicker fx:id="date" blendMode="SOFT_LIGHT" layoutX="575.0" layoutY="255.0" prefHeight="34.0" prefWidth="228.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></DatePicker>
+      <JFXPasswordField fx:id="Mdp" layoutX="620.0" layoutY="298.0" prefHeight="38.0" prefWidth="201.0" unFocusColor="#cd6565">
+         <font>
+            <Font name="Comic Sans MS Bold" size="14.0" />
+         </font></JFXPasswordField>
+      <JFXComboBox fx:id="id" layoutX="696.0" layoutY="441.0" prefHeight="25.0" prefWidth="201.0" />
+      <JFXButton buttonType="RAISED" layoutX="680.0" layoutY="540.0" onAction="#register" prefHeight="44.0" prefWidth="144.0" style="-fx-background-color: #4a3e7c;" text="Register" textFill="#d8dada">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXCheckBox fx:id="con" checkedColor="#10369c" layoutX="597.0" layoutY="496.0" prefHeight="23.0" prefWidth="141.0" text="Conductor">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></JFXCheckBox>
+      <JFXCheckBox fx:id="pass" layoutX="796.0" layoutY="495.0" prefHeight="25.0" prefWidth="188.0" text="Passenger">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></JFXCheckBox>
+      <Label layoutX="27.0" layoutY="327.0" text="FirstName">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Label>
+      <Label layoutX="27.0" layoutY="398.0" text="Lastname">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Label>
+      <Label layoutX="27.0" layoutY="470.0" prefHeight="17.0" prefWidth="57.0" text="Email">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Label>
+      <Label layoutX="527.0" layoutY="316.0" prefHeight="25.0" prefWidth="96.0" text="Password">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Label>
+      <Label layoutX="503.0" layoutY="254.0" prefHeight="34.0" prefWidth="116.0" text="Birthday">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Label>
+      <Label layoutX="578.0" layoutY="453.0" text="InterestedIn">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Label>
+      <JFXTextField fx:id="tel" layoutX="617.0" layoutY="390.0" prefHeight="25.0" prefWidth="207.0" unFocusColor="#cd6565">
+         <font>
+            <Font name="Comic Sans MS Bold" size="14.0" />
+         </font></JFXTextField>
+      <Label layoutX="555.0" layoutY="390.0" prefHeight="25.0" prefWidth="79.0" text="Phone">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Label>
+      <JFXButton buttonType="RAISED" layoutX="26.0" layoutY="154.0" onAction="#upload" prefHeight="30.0" prefWidth="116.0" style="-fx-background-color: #726e77;" text="UpLoad Photo" textFill="#cd6565">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></JFXButton>
+      <StackPane fx:id="fabsContainer" layoutX="921.0" layoutY="20.0" prefHeight="84.0" prefWidth="45.0" />
+      <Label fx:id="verifdate" layoutX="830.0" layoutY="263.0" prefHeight="17.0" prefWidth="144.0" />
+      <Label fx:id="verifpass" layoutX="562.0" layoutY="345.0" prefHeight="34.0" prefWidth="282.0" visible="false" />
+      <Label fx:id="veriftel" layoutX="834.0" layoutY="381.0" prefHeight="34.0" prefWidth="162.0" visible="false" />
+      <Label fx:id="verifnom" layoutX="298.0" layoutY="322.0" prefHeight="38.0" prefWidth="248.0" textFill="#da1818">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="verifprenom" layoutX="307.0" layoutY="381.0" prefHeight="38.0" prefWidth="240.0" visible="false" />
+      <Label fx:id="verifmail" layoutX="370.0" layoutY="453.0" prefHeight="34.0" prefWidth="214.0" textFill="#d71313" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <Label layoutX="27.0" layoutY="253.0" text="UserName">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="username" focusColor="#234abf" layoutX="123.0" layoutY="248.0" unFocusColor="#cd6565">
+         <font>
+            <Font name="Comic Sans MS Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="namesign" layoutX="601.0" layoutY="72.0" prefHeight="64.0" prefWidth="255.0" rotate="18.4" text="Cool Voiturage" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgsign" fitHeight="166.0" fitWidth="188.0" layoutX="311.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/lgnCar.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
